@@ -1,8 +1,5 @@
-language: java
+language: php 
 
-jdk:
-  - oraclejdk8
-    
 env:
    global:
      - COMMIT=${TRAVIS_COMMIT::8}
@@ -10,7 +7,11 @@ env:
 services:
     - docker
 
-install: echo true
+install: 
+    - echo "install nothing"
+
+script:
+    - echo "no tests"
 
 after_success:
     - docker login -u $DOCKER_USER -p $DOCKER_PASS
