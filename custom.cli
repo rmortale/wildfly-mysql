@@ -1,6 +1,6 @@
 embed-server --std-out=echo
 
-module add --name=com.mysql --resources=/tmp/mysql-connector-java-5.1.45-bin.jar --dependencies=javax.api,javax.transaction.api
+module add --name=com.mysql --resources=/tmp/mysql-connector-java-8.0.11.jar --dependencies=javax.api,javax.transaction.api
 
 # Add MySQL driver
 /subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.mysql,driver-xa-datasource-class-name=com.mysql.jdbc.jdbc2.optional.MysqlXADataSource)
